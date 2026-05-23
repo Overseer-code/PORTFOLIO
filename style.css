@@ -2,10 +2,10 @@
    CSS Variables & Design System
    ================================ */
 :root {
-    --primary-gradient: linear-gradient(135deg, #6b7280 0%, #9ca3af 50%, #d1d5db 100%);
+   --primary-gradient: linear-gradient(135deg, #10abb9 0%, #34d399 50%, #6ee7b7 100%);
     --secondary-gradient: linear-gradient(135deg, #4b5563 0%, #6b7280 100%);
     --accent-gradient: linear-gradient(135deg, #9ca3af 0%, #e5e7eb 100%);
-    --glow-gradient: linear-gradient(135deg, rgba(107, 114, 128, 0.4), rgba(156, 163, 175, 0.4));
+    --glow-gradient: linear-gradient(135deg, rgba(107, 114, 128, 0.4), rgba(203, 208, 217, 0.4));
 
     --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
@@ -14,10 +14,10 @@
     --bg-card-hover: rgba(255, 255, 255, 0.05);
     --bg-glass: rgba(255, 255, 255, 0.03);
 
-    --text-primary: #ffffff;
+    --text-primary: #005133;
     --text-secondary: #e2e8f0;
     --text-muted: #9ca3af;
-    --text-accent: #d1d5db;
+    --text-accent: #005133;
 
     --border-color: rgba(156, 163, 175, 0.15);
     --border-glow: rgba(156, 163, 175, 0.35);
