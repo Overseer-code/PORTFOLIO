@@ -874,3 +874,7 @@ body::before {
     border-color: rgba(139, 92, 246, 0.35);
     transform: translateY(-2px);
 }
+.section-card {
+    opacity: 1 !important;
+    transform: none !important;
+}
