@@ -8,19 +8,32 @@ A modern, responsive personal portfolio website built with HTML5, CSS3, and vani
 - SVG Icons
 
 ## Project Structure
-Setup & Usage
+
+portfolio/
+├── index.html
+├── style.css
+├── script.js
+└── image/profile.jpg
+
+## Setup & Usage
 1. Clone the repository:
 ```bash
    git clone <repository-url>
 ```
 2. Open `index.html` in a browser or use Live Server in VS Code.
 
-## Current Status (Week 2)
-- Sidebar with profile picture, navigation, and social links completed.
-- Hero section with greeting, title, subtitle, and CTA buttons completed.
-- About section with bio, stats, and skills completed.
+## Current Status (Completed)
+- Sidebar with navigation and social links completed.
+- Hero section with profile photo, greeting, title, and CTA buttons completed.
+- About section with bio and skills completed.
+- Education section with timeline completed.
+- Projects section with project cards completed.
+- Achievements section completed.
+- Blogs & Hobbies section completed.
+- Publications section completed.
+- Contact section with form completed.
 
 ## Future Improvements
-- [ ] Add remaining sections (Education, Projects, Achievements, Contact, etc.)
 - [ ] Connect contact form to EmailJS or Formspree.
 - [ ] Add light/dark mode toggle.
+- [ ] Add more real projects as they are completed.

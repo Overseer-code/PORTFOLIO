@@ -94,3 +94,89 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         this.classList.add('active');
     });
 });
+// ================================
+// Form Submission Handler
+// ================================
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const submitBtn = event.target.querySelector('.submit-btn');
+    const originalContent = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<span>Sending...</span>';
+    submitBtn.disabled = true;
+
+    setTimeout(() => {
+        submitBtn.innerHTML = '<span>Message Sent!</span>';
+        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+
+        event.target.reset();
+
+        setTimeout(() => {
+            submitBtn.innerHTML = originalContent;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+        }, 2000);
+    }, 1500);
+
+    return false;
+}
+
+// ================================
+// Active Section Highlighting
+// ================================
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPos = window.scrollY + 150;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+    }
+    scrollTimeout = window.requestAnimationFrame(updateActiveNavLink);
+});
+
+// ================================
+// Initialize on Load
+// ================================
+document.addEventListener('DOMContentLoaded', () => {
+    updateActiveNavLink();
+
+    const firstSection = document.querySelector('.section-card');
+    if (firstSection) {
+        const rect = firstSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            firstSection.classList.add('visible');
+        }
+    }
+});
+
+// ================================
+// Handle Resize Events
+// ================================
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    }, 250);
+});
