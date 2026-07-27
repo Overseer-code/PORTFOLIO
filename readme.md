@@ -8,13 +8,13 @@ A modern, responsive personal portfolio website built with HTML5, CSS3, and vani
 - SVG Icons
 
 ## Project Structure
-
+```
 portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
 └── image/profile.jpg
-
+```
 ## Setup & Usage
 1. Clone the repository:
 ```bash
